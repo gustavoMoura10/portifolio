@@ -143,7 +143,7 @@ export default function AboutMe() {
                   height={18}
                   className="mr-2"
                 />
-                <p className="font-normal text-gray-700 dark:text-gray-400">Inglês (Fluente)</p>
+                <p className="font-normal text-gray-700 dark:text-gray-400">Inglês (Avançado)</p>
               </li>
               <li className="flex items-center">
                 <Image
