@@ -2,10 +2,23 @@ import { faGithub, faGitlab, faLinkedin } from "@fortawesome/free-brands-svg-ico
 import { faEnvelopeOpen, faGraduationCap, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-
+import "./index.css";
+import { useEffect } from "react";
 export default function Banner() {
+    useEffect(() => {
+        const fotoElement = document.querySelector('.foto-tleft') as HTMLElement;
+        const cardElement = document.querySelector('.card-tright') as HTMLElement;
+
+        if (fotoElement) {
+            fotoElement.style.transform = 'translateX(0)';
+        }
+
+        if (cardElement) {
+            cardElement.style.transform = 'translateX(0)';
+        }
+    }, []);
     return (
-        <section id="banner" className="relative w-full h-[500px] overflow-hidden flex flex-col sm:flex-row">
+        <section id="banner" className="relative w-full overflow-hidden flex flex-col sm:flex-row">
             <div className="absolute inset-0 z-10">
                 <Image
                     src="/codigo.jpg"
@@ -17,7 +30,7 @@ export default function Banner() {
                 />
             </div>
             <div>
-                <div className="foto-tleft absolute top-1/2 left-0 z-20 -translate-y-1/2 sm:-translate-x-full sm:left-[40%]">
+                <div className={`foto-tleft absolute top-1/2 left-0 z-20 -translate-y-1/2 sm:-translate-x-full sm:left-[40%]`}>
                     <Image
                         src="/minhafoto1.jpeg"
                         alt="Minha foto"

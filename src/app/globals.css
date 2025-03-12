@@ -22,11 +22,11 @@ html {
 }
 
 main {
-  padding-left: 100px;
-  padding-right: 100px;
+
   background-color: var(--branco);
   flex: 1;
-  min-width: 100% !important;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 /* Para telas grandes */
@@ -51,41 +51,15 @@ main {
 }
 
 main section {
-  margin-top: 25px;
   margin-bottom: 25px;
+  
   min-width: 100% !important;
-  min-height: 450px !important;
+  min-height: 100vh;
 }
 
-.foto-tleft {
-  left: 40%;
-  transform: translateX(-100%);
-  transition: all 1.5s ease-in-out !important;
-}
 
-.card-tright {
-  right: 40%;
-  transform: translateX(100%);
-  transition: all 1.5s ease-in-out !important;
-}
-
-/* Para telas menores que 1000px */
-@media (max-width: 1000px) {
-  .foto-tleft {
-    left: 50% !important;
-    transform: translateX(-50%) translateY(-50%) !important;
-    width: 200px !important;
-    height: 200px !important;
-  }
-
-  .card-tright {
-    right: 50% !important; /* Centraliza o card */
-    transform: translateX(50%) translateY(-50%) !important; /* Ajusta a posição */
-    width: 90% !important; /* Reduz o tamanho do card */
-    max-width: 300px; /* Define um tamanho máximo para o card */
-    margin-top: 220px; /* Ajusta a margem para não sobrepor a foto */
-  }
-}
 .leaflet-container {
   z-index: 0 !important;
 }
+
+

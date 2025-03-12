@@ -36,30 +36,37 @@ export default function Job(
 ) {
     return (
         <div
-            className={`mb-4 flex flex-col items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm md:flex-row ${openIndex === slug ? 'bg-gray-100 dark:bg-gray-700' : ''}`}
+            className={`mb-4 flex flex-col items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm ${openIndex === slug ? 'bg-gray-100 dark:bg-gray-700' : ''}`}
         >
-            <Image
-                src={imageSrc}
-                alt={imageAlt}
-                width={100}
-                height={100}
-                quality={100}
-                className="object-cover mt-2 w-50 h-50 md:max-w-xs md:h-48 rounded-full md:rounded-none md:rounded-s-lg"
-            />
-            <div className="flex flex-col justify-between p-4 leading-normal">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{functionJob}</h3>
-                <h4 className="text-gray-600 dark:text-gray-400">{enterprise} · {schedule}</h4>
-                <h4 className="text-gray-600 dark:text-gray-400">{from} - {to}</h4>
-                <h4 className="text-gray-600 dark:text-gray-400">{place} ({typeJob})</h4>
+            {/* Imagem no topo */}
+            <div className="w-full flex justify-center p-6">
+                <Image
+                    src={imageSrc}
+                    alt={imageAlt}
+                    width={120}
+                    height={120}
+                    quality={100}
+                    className="object-cover w-32 h-32 rounded-full"
+                />
+            </div>
 
+            {/* Texto abaixo da imagem */}
+            <div className="flex flex-col justify-between p-6 leading-normal w-full">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white text-center">{functionJob}</h3>
+                <h4 className="text-xl text-gray-600 dark:text-gray-400 text-center">{enterprise} · {schedule}</h4>
+                <h4 className="text-xl text-gray-600 dark:text-gray-400 text-center">{from} - {to}</h4>
+                <h4 className="text-xl text-gray-600 dark:text-gray-400 text-center">{place} ({typeJob})</h4>
+
+                {/* Botão "Ver mais" ou "Ver menos" */}
                 <button
                     onClick={() => toggleExperience(slug)}
-                    className="text-emerald-900 dark:text-emerald-400 mt-2 md:hidden"
+                    className="text-base text-emerald-900 dark:text-emerald-400 mt-4 text-center"
                 >
                     {openIndex === slug ? 'Ver menos' : 'Ver mais'}
                 </button>
 
-                <p className={`text-gray-900 dark:text-gray-300 mt-3 ${openIndex === slug || 'md:block hidden'}`}>
+                {/* Descrição (visível apenas se o Job estiver aberto) */}
+                <p className={`text-sm text-gray-900 dark:text-gray-300 mt-4 ${openIndex === slug ? 'block' : 'hidden'}`}>
                     {descritiption}
                 </p>
             </div>

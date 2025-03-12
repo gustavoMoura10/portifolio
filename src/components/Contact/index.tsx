@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dynamic from "next/dynamic";
 const Map = dynamic(() => import('../Map'), {
     ssr: false, // Isso garante que o componente será renderizado apenas no lado do cliente
-  });
+});
 import { faEnvelopeOpen, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { sendEmail } from "@/actions/sendEmail.action";
 import { useState } from "react";
@@ -13,7 +13,7 @@ export default function Contact() {
         event.preventDefault();
         const formData = new FormData(event.target as HTMLFormElement);
 
-        const result = await sendEmail(null,formData);
+        const result = await sendEmail(null, formData);
         console.log(result)
         if (result?.success) {
             setMessage('Email enviado com sucesso!');
@@ -25,7 +25,7 @@ export default function Contact() {
     return (
         <section id="contact" className="flex flex-col bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 dark:bg-gray-800 p-4">
             <div>
-                <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
                     Contato
                 </h2>
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-4 text-gray-700 dark:text-gray-300">
@@ -50,13 +50,13 @@ export default function Contact() {
                 </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-6 mt-4">
-                <div className="flex-1 mt-5">
+            <div className="flex grow-1 flex-col md:flex-row gap-6 mt-4 ">
+                <div className="flex-1 mt-5 flex flex-col justify-center items-center">
                     <Map />
                 </div>
-                <div className="flex-1 p-6 rounded-lg shadow-md">
+                <div className="flex-1 p-6 rounded-lg shadow-md flex flex-col justify-center items-center">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Fale comigo</h3>
-                    <form onSubmit={handleFormSubmit}>
+                    <form className="w-100" onSubmit={handleFormSubmit}>
                         <div className="mb-4">
                             <label className="block text-gray-700 dark:text-gray-400 font-bold mb-2">Nome</label>
                             <input type="text" className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" name="name" />

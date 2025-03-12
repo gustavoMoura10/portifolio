@@ -1,0 +1,9 @@
+.job-container {
+    width: 100% !important; /* Largura total */
+    max-width: 300px !important; /* Define um tamanho máximo para o Job */
+    margin: 0 auto; /* Centraliza o Job */
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+  }
