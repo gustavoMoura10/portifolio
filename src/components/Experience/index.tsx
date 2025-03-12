@@ -35,6 +35,7 @@ export default function Experience() {
                     setOpenIndex={setOpenIndex}
                     slug={'superlogica'}
                 />
+                
                 <Job
                     imageSrc="/experiences/qualicorp.jpeg"
                     imageAlt="Qualicorp"
