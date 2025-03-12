@@ -36,8 +36,8 @@ export default function Banner() {
             <div>
                 {/* Foto animada */}
                 <motion.div
-                    className="foto-tleft absolute top-1/2 left-0 z-20"
-                    initial={isMobile ? { x: "-50%", y: "-50%", opacity: 0 } : { x: "-100%", opacity: 0 }}
+                    className="foto-tleft absolute top-1/3 left-0 z-20"
+                    initial={isMobile ? { x: "-50%", y: "-50%", opacity: 0 } : { x: "-100%",  opacity: 0 }}
                     animate={{ x: 0, y: 0, opacity: 1 }}
                     transition={{ duration: 1.5, ease: "easeInOut" }}
                 >
@@ -52,12 +52,12 @@ export default function Banner() {
 
                 {/* Card animado */}
                 <motion.div
-                    className="card-tright absolute top-1/2 right-0 z-30 bg-white p-6 rounded-lg shadow-lg w-80"
+                    className="card-tright absolute top-1/3 right-0 z-30 bg-white p-6 rounded-lg shadow-lg w-80"
                     initial={isMobile ? { x: "50%", y: "-50%", opacity: 0 } : { x: "100%", opacity: 0 }}
                     animate={{ x: 0, y: 0, opacity: 1 }}
                     transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
                 >
-                    <h2 className="text-2xl font-bold mb-4">Gustavo Moura</h2>
+                    <h2 className="text-2xl font-bold mb-4">Gustavo Moura <small className="text-sm text-gray-500">(Castor)</small></h2>
 
                     {/* Informações de contato */}
                     <div className="flex flex-row">

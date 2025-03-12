@@ -71,9 +71,9 @@ export default function NavMenu() {
             </button>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex shrink-0 items-center">
+            <div className="flex shrink-0 items-center cursor-pointer">
               <Image
-                src="/minhafoto1.jpeg"
+                src="/icone.png"
                 onClick={() => scrollToSection('banner')}
                 alt="Minha foto"
                 width={300}
