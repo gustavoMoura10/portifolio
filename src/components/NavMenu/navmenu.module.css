@@ -1,0 +1,31 @@
+
+.menu {
+    min-width: 70%;
+    background-color:#242424;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+}
+
+
+
+/* Lista do menu */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menu ul li {
+    margin: 15px 0;
+    color: var(--branco);
+    transition: color 0.3s ease;
+}
+
+.menu ul li:hover {
+    cursor: pointer;
+    color: var(--amarelo-fosco);
+}
