@@ -88,7 +88,7 @@ export default function Skills() {
                 { name: "Git", imagePath: "/skills/git.svg", alt: "Git" },
                 { name: "AWS", imagePath: "/skills/aws.svg", alt: "AWS" },
                 { name: "Google Cloud", imagePath: "/skills/google-cloud.svg", alt: "Google Cloud" },
-                { name: "Postgre SQL", imagePath: "/skills/postgresql.svg", alt: "Postgre SQL" },
+                { name: "PostgreSQL", imagePath: "/skills/postgresql.svg", alt: "PostgreSQL" },
                 { name: "MySQL", imagePath: "/skills/file-type-mysql.svg", alt: "MySQL" },
                 { name: "SQL Server", imagePath: "/skills/microsoft-sql-server-logo-svgrepo-com.svg", alt: "SQL Server" },
                 { name: "MongoDB", imagePath: "/skills/mongodb-original.svg", alt: "MongoDB" },

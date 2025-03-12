@@ -47,13 +47,13 @@ export default function AboutMe() {
           <div className="w-full md:w-2/3 p-6">
             <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">Resumo</h3>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Olá! Sou um Desenvolvedor Full-Stack de São Paulo, Brasil, apaixonado por tecnologia e inovação. Com experiência desde 2018, trabalho criando soluções que otimizam processos, automatizam integrações e melhoram a experiência do usuário, sempre com foco em performance e escalabilidade.
+              Graduado em Ciências da Computação (2021), com sólida experiência no desenvolvimento de software desde 2018. Ao longo da minha trajetória, desenvolvi habilidades em diversas tecnologias, incluindo Java, JavaScript, TypeScript, React, React Native, Vue.js, Angular, Node.js, Spring Boot, além de bancos de dados como MySQL, PostgreSQL, MongoDB e Neo4j. Tenho experiência com Computação em Nuvem, CI/CD e testes unitários.
             </p>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Ao longo da minha trajetória, desenvolvi soluções que otimizam processos, automatizam integrações e melhoram a experiência do usuário, sempre com foco em performance e escalabilidade. Tenho experiência tanto no back-end, criando APIs robustas e eficientes, quanto no front-end, desenvolvendo interfaces intuitivas e dinâmicas.
+              Minha experiência inclui o gerenciamento de bancos de dados, desenvolvimento de automações para integrar dados de serviços de terceiros e a implementação de soluções baseadas em IA para otimização de processos e integração de sistemas. Também criei funcionalidades que permitem aos usuários realizarem implantações de dados de forma autônoma, reduzindo a dependência de suporte técnico. Trabalhei no desenvolvimento full-stack, criando microserviços, otimizando processos internos e garantindo a escalabilidade e eficiência dos sistemas. Além disso, implementei soluções de automação de processos para setores como saúde e hotelaria, incluindo disparo de e-mails, web scraping e integração de sistemas internos.
             </p>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Além do desenvolvimento de software, sou um entusiasta das artes e do cinema, sempre buscando novas inspirações dentro e fora da tecnologia.
+              Sou apaixonado por novas tecnologias e estou sempre em busca de aprimorar minhas habilidades para oferecer soluções inovadoras e eficientes. Além disso, tenho um grande interesse pelas artes gerais e pelo cinema.
             </p>
           </div>
         </motion.div>
