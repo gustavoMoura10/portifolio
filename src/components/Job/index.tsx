@@ -14,7 +14,6 @@ export default function Job(
         descritiption,
         toggleExperience,
         openIndex,
-        setOpenIndex,
         slug
     }
         : {

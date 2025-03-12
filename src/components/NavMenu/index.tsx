@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function NavMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-  const [sections, setSections] = useState([
+  const sections = [ 
     {
       id: "aboutMe",
       name: "Sobre mim",
@@ -24,7 +24,8 @@ export default function NavMenu() {
       id: "contact",
       name: "Contato",
     },
-  ]);
+  ]
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
