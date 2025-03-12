@@ -1,11 +1,11 @@
 .foto-tleft {
-    left: 40%;
+    left: 20%;
     transform: translateX(-100%);
     transition: all 1.5s ease-in-out !important;
 }
 
 .card-tright {
-    right: 40%;
+    right: 20%;
     transform: translateX(100%);
     transition: all 1.5s ease-in-out !important;
 }
@@ -14,21 +14,18 @@
 @media (max-width: 1000px) {
     .foto-tleft {
         left: 50% !important;
-        transform: translateX(-50%) translateY(-50%) !important;
+        transform: translateX(-50%) translateY(-100%) !important;
+        /* Subindo mais */
         width: 200px !important;
         height: 200px !important;
     }
 
     .card-tright {
         right: 50% !important;
-        /* Centraliza o card */
         transform: translateX(50%) translateY(-50%) !important;
-        /* Ajusta a posição */
         width: 90% !important;
-        /* Reduz o tamanho do card */
         max-width: 300px;
-        /* Define um tamanho máximo para o card */
-        margin-top: 220px;
-        /* Ajusta a margem para não sobrepor a foto */
+        margin-top: 180px;
+        /* Reduzindo um pouco para evitar sobreposição */
     }
 }

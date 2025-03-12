@@ -56,7 +56,7 @@ export default function Contact() {
                 </div>
                 <div className="flex-1 p-6 rounded-lg shadow-md flex flex-col justify-center items-center">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Fale comigo</h3>
-                    <form className="w-100" onSubmit={handleFormSubmit}>
+                    <form className="w-full sm:w-96" onSubmit={handleFormSubmit}>
                         <div className="mb-4">
                             <label className="block text-gray-700 dark:text-gray-400 font-bold mb-2">Nome</label>
                             <input type="text" className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" name="name" />

@@ -29,26 +29,6 @@ main {
   margin-left: 10px;
 }
 
-/* Para telas grandes */
-@media (max-width: 1200px) {
-  main {
-    padding: 75px;
-  }
-}
-
-/* Para telas médias */
-@media (max-width: 900px) {
-  main {
-    padding: 50px;
-  }
-}
-
-/* Para telas pequenas */
-@media (max-width: 600px) {
-  main {
-    padding: 25px;
-  }
-}
 
 main section {
   margin-bottom: 25px;

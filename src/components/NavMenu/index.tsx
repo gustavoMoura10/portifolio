@@ -88,8 +88,8 @@ export default function NavMenu() {
                     key={section.id}
                     onClick={() => scrollToSection(section.id)}
                     className={`rounded-md px-3 py-2 text-sm font-medium  cursor-pointer ${activeSection === section.id
-                      ? "bg-emerald-700 text-white"
-                      : "text-gray-300 hover:bg-emerald-700 hover:text-white"
+                      ? "bg-emerald-700  text-gray-200"
+                      : "text-white hover:bg-emerald-700 hover:text-white"
                       }`}
                   >
                     {section.name}
@@ -107,8 +107,8 @@ export default function NavMenu() {
               key={section.id}
               onClick={() => scrollToSection(section.id)}
               className={`block w-full text-left rounded-md cursor-pointer px-3 py-2 text-base font-medium ${activeSection === section.id
-                ? "bg-emerald-700 text-white"
-                : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                ? "bg-emerald-700 text-gray-200"
+                : "text-white hover:bg-gray-700 hover:text-white"
                 }`}
             >
               {section.name}

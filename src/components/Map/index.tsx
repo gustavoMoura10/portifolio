@@ -22,6 +22,7 @@ export default function Map() {
     if (!mounted) {
         return <div className="h-40 flex items-center justify-center text-gray-500">Carregando mapa...</div>;
     }
+
     return (
         <MapContainer center={[-23.5322569, -46.7082395]} zoom={13} style={{ height: "400px", width: "100%" }}>
             <TileLayer
