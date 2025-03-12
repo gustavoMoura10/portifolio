@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Map from "../Map";
+/* import Map from "../Map"; */
 import { faEnvelopeOpen, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { sendEmail } from "@/actions/sendEmail.action";
 import { useState } from "react";
@@ -49,7 +49,7 @@ export default function Contact() {
 
             <div className="flex flex-col md:flex-row gap-6 mt-4">
                 <div className="flex-1 mt-5">
-                    <Map />
+                    {/* <Map /> */}
                 </div>
                 <div className="flex-1 p-6 rounded-lg shadow-md">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Fale comigo</h3>
