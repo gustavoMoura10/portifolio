@@ -91,7 +91,7 @@ export default function Banner() {
                         </a>
                     </div>
                     <div className="flex flex-row mt-10 justify-center">
-                        <button className="bg-emerald-400 rounded p-2 text-white">
+                        <button className="cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded">
                             <a href={'/curriculo.pdf'} download>
                                 <FontAwesomeIcon icon={faFile} className="mr-2 text-1xl" /> Baixar CV
                             </a>
