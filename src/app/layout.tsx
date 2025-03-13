@@ -21,6 +21,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Gustavo Moura",
   description: "Portfólio de Gustavo Moura",
+  keywords: "Gustavo Moura, Desenvolvedor, Front-end, Back-end, Fullstack, Portfolio, Banco de Dados, Node.js, Java, Javascript, React, Angular, Vue, Express, Next.js, Nest.js, MongoDB, MySQL, TypeScript, PostgreSQL, SQL Server",
 };
 
 export default function RootLayout({
