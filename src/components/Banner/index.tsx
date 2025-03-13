@@ -1,6 +1,6 @@
 "use client";
 
-import { faGithub, faGitlab, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeOpen, faFile, faGraduationCap, faHouse, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
@@ -92,7 +92,7 @@ export default function Banner() {
                     </div>
                     <div className="flex flex-row mt-10 justify-center">
                         <button className="bg-emerald-400 rounded p-2 text-white">
-                            <a href={'/curriculo-gustavo.pdf'} download>
+                            <a href={'/curriculo.pdf'} download>
                                 <FontAwesomeIcon icon={faFile} className="mr-2 text-1xl" /> Baixar CV
                             </a>
                         </button>

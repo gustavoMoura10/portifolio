@@ -1,3 +1,4 @@
+import { motion, AnimatePresence } from "framer-motion"; // Importe motion e AnimatePresence
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dynamic from "next/dynamic";
 const Map = dynamic(() => import('../Map'), {
@@ -5,27 +6,45 @@ const Map = dynamic(() => import('../Map'), {
 });
 import { faEnvelopeOpen, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { sendEmail } from "@/actions/sendEmail.action";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Contact() {
-    const [message, setMessage] = useState<string | null>(null);
+    const [response, setResponse] = useState<any | null>(null);
+
+    useEffect(() => {
+        if (response) {
+            const timer = setTimeout(() => {
+                setResponse(null);
+            }, 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [response]);
+
     const handleFormSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
-        const formData = new FormData(event.target as HTMLFormElement);
+        const form = event.target as HTMLFormElement; // Cast explícito para HTMLFormElement
+        const formData = new FormData(form);
 
         const result = await sendEmail(null, formData);
-        console.log(result)
+
+        form.reset();
         if (result?.success) {
-            setMessage('Email enviado com sucesso!');
+            setResponse({
+                success: true,
+                message: "Email enviado com sucesso!"
+            });
         } else {
-            setMessage('Erro ao enviar o email. Tente novamente mais tarde.');
+            setResponse({
+                success: false,
+                message: "Ocorreu um erro ao enviar o email."
+            });
         }
     };
 
     return (
         <section id="contact" className="flex flex-col bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 dark:bg-gray-800 p-4">
             <div>
-                <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">
                     Contato
                 </h2>
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-4 text-gray-700 dark:text-gray-300">
@@ -59,25 +78,48 @@ export default function Contact() {
                     <form className="w-full sm:w-96" onSubmit={handleFormSubmit}>
                         <div className="mb-4">
                             <label className="block text-gray-700 dark:text-gray-400 font-bold mb-2">Nome</label>
-                            <input type="text" className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" name="name" />
+                            <input
+                                required
+                                type="text"
+                                className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                                name="name"
+                            />
                         </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 dark:text-gray-400 font-bold mb-2">E-mail</label>
-                            <input type="email" className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" name="email" />
+                            <input
+                                required
+                                type="email"
+                                className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                                name="email"
+                            />
                         </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 dark:text-gray-400 font-bold mb-2">Mensagem</label>
-                            <textarea className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows={4} name="message"></textarea>
+                            <textarea
+                                required
+                                className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                                rows={4}
+                                name="message"
+                            ></textarea>
                         </div>
-                        <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded">
+                        <button className="w-full cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded">
                             Enviar
                         </button>
                     </form>
-                    {message && (
-                        <div className={`mt-4 p-2 text-center ${message.includes('sucesso') ? 'text-green-600' : 'text-red-600'} bg-gray-100 rounded`}>
-                            {message}
-                        </div>
-                    )}
+                    <AnimatePresence>
+                        {response && (
+                            <motion.div
+                                initial={{ opacity: 0, y: -20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
+                                transition={{ duration: 0.3 }}
+                                className={`mt-4 p-2 text-center ${response.success ? 'text-green-600' : 'text-red-600'} bg-gray-100 rounded`}
+                            >
+                                {response.message}
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
                 </div>
             </div>
         </section>

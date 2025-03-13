@@ -1,9 +1,7 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState } from 'react';
 import Job from '../Job';
-import useEmblaCarousel from 'embla-carousel-react';
 
 import EmblaCarousel from '../Embla/EmblaCarousel';
-import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Experience() {
     const [openIndex, setOpenIndex] = useState<string | null>(null);
@@ -64,7 +62,7 @@ export default function Experience() {
             id="experience"
             className="flex flex-col bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 dark:bg-gray-800 p-4"
         >
-            <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+            <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">
                 Experiência Profissional
             </h2>
 

@@ -2,35 +2,33 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function AboutMe() {
-  // Variantes de animação para os cards
   const cardVariants = {
     offscreen: {
-      x: -100, // Começa 100px à esquerda
-      opacity: 0, // Inicia invisível
+      x: -100,
+      opacity: 0,
     },
     onscreen: {
-      x: 0, // Move para a posição original
-      opacity: 1, // Torna visível
+      x: 0,
+      opacity: 1,
       transition: {
-        type: 'spring', // Tipo de transição suave
-        stiffness: 100, // Rigidez da animação
-        delay: 0.2, // Pequeno atraso para cada card
+        type: 'spring',
+        stiffness: 100,
+        delay: 0.2,
       },
     },
   };
 
   return (
     <section id="aboutMe" className="flex flex-col bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 dark:bg-gray-800 p-6">
-      <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+      <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">
         Sobre Mim
       </h2>
 
       <div className="flex flex-col gap-8">
-        {/* Card de Resumo */}
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.2 }}
           variants={cardVariants}          
           className="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow dark:border-gray-700 dark:bg-gray-800"
         >
@@ -57,14 +55,12 @@ export default function AboutMe() {
             </p>
           </div>
         </motion.div>
-
-        {/* Card de Graduação */}
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.2 }}
           variants={cardVariants}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.4 }}
           className="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow dark:border-gray-700 dark:bg-gray-800"
         >
           <div className="w-full md:w-1/3">
@@ -102,14 +98,12 @@ export default function AboutMe() {
             </p>
           </div>
         </motion.div>
-
-        {/* Card de Línguas */}
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.2 }}
           variants={cardVariants}
-          transition={{ delay: 0.4 }} // Atraso maior para o terceiro card
+          transition={{ delay: 0.6 }}
           className="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow dark:border-gray-700 dark:bg-gray-800"
         >
           <div className="w-full md:w-1/3">

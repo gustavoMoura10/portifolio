@@ -6,23 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Skills() {
     const [defaultOpen, setDefaultOpen] = useState(null);
     const [isMobile, setIsMobile] = useState(false);
-
-    // Função para verificar se a tela é mobile
     const checkIsMobile = () => {
         if (typeof window !== "undefined") {
             setIsMobile(window.innerWidth < 640);
         }
     };
-
-    // Adiciona o listener para o evento resize
     useEffect(() => {
-        // Verifica o tamanho da tela ao montar o componente
         checkIsMobile();
-
-        // Adiciona o listener para o evento resize
         window.addEventListener("resize", checkIsMobile);
-
-        // Remove o listener ao desmontar o componente
         return () => {
             window.removeEventListener("resize", checkIsMobile);
         };
@@ -120,7 +111,7 @@ export default function Skills() {
     ];
     return (
         <section id="skills" className="flex flex-col bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 dark:bg-gray-800 p-4">
-            <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+            <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">
                 Habilidades
             </h2>
             <div className='grow-1 flex flex-col justify-between'>
