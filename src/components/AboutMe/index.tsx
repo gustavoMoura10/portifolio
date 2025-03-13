@@ -28,10 +28,10 @@ export default function AboutMe() {
       <div className="flex flex-col gap-8">
         {/* Card de Resumo */}
         <motion.div
-          initial="offscreen" // Estado inicial
-          whileInView="onscreen" // Animação ao entrar na tela
-          viewport={{ once: true, amount: 0.5 }} // Dispara a animação uma vez, quando 50% do card estiver visível
-          variants={cardVariants} // Variantes de animação
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={cardVariants}          
           className="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow dark:border-gray-700 dark:bg-gray-800"
         >
           <div className="w-full md:w-1/3">
@@ -64,7 +64,7 @@ export default function AboutMe() {
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.5 }}
           variants={cardVariants}
-          transition={{ delay: 0.4 }} // Atraso maior para o segundo card
+          transition={{ delay: 0.2 }}
           className="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow dark:border-gray-700 dark:bg-gray-800"
         >
           <div className="w-full md:w-1/3">
@@ -109,7 +109,7 @@ export default function AboutMe() {
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.5 }}
           variants={cardVariants}
-          transition={{ delay: 0.6 }} // Atraso maior para o terceiro card
+          transition={{ delay: 0.4 }} // Atraso maior para o terceiro card
           className="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow dark:border-gray-700 dark:bg-gray-800"
         >
           <div className="w-full md:w-1/3">

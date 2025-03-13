@@ -1,16 +1,38 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ListTech from '../ListTech';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
-
+import { motion, AnimatePresence } from "framer-motion";
 export default function Skills() {
     const [defaultOpen, setDefaultOpen] = useState(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Função para verificar se a tela é mobile
+    const checkIsMobile = () => {
+        if (typeof window !== "undefined") {
+            setIsMobile(window.innerWidth < 640);
+        }
+    };
+
+    // Adiciona o listener para o evento resize
+    useEffect(() => {
+        // Verifica o tamanho da tela ao montar o componente
+        checkIsMobile();
+
+        // Adiciona o listener para o evento resize
+        window.addEventListener("resize", checkIsMobile);
+
+        // Remove o listener ao desmontar o componente
+        return () => {
+            window.removeEventListener("resize", checkIsMobile);
+        };
+    }, []);
 
     const toggleSection = (section: any) => {
         if (defaultOpen == section) {
-            setDefaultOpen(null)
+            setDefaultOpen(null);
         } else {
-            setDefaultOpen(section)
+            setDefaultOpen(section);
         }
     };
     const sections = [
@@ -104,10 +126,9 @@ export default function Skills() {
             <div className='grow-1 flex flex-col justify-between'>
                 {sections.map((section, indexSection) => {
                     return (
-                        <div className="w-full justify-self-center " key={indexSection}>
+                        <div className="w-full justify-self-center" key={indexSection}>
                             <div className="flex items-center justify-between mb-4">
                                 <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">{section.title}</h5>
-
                                 <span
                                     className="sm:hidden p-2"
                                     onClick={() => toggleSection(section.name)}
@@ -119,19 +140,29 @@ export default function Skills() {
                                     )}
                                 </span>
                             </div>
-                            <div className={`${defaultOpen === section.name ? 'block' : 'hidden'} sm:block`}>
-                                <div className="flow-root">
-                                    <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700 grid grid-cols-3 gap-4">
-                                        {section.list.map((tech, indexTech) => {
-                                            return (
-                                                <ListTech alt={tech.alt} imagePath={tech.imagePath} name={tech.name} key={indexTech} />
-                                            )
-                                        })}
-                                    </ul>
-                                </div>
-                            </div>
+                            <AnimatePresence>
+                                {(defaultOpen === section.name || !isMobile) && (
+                                    <motion.div
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: "auto" }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        className="sm:block"
+                                    >
+                                        <div className="flow-root">
+                                            <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700 grid grid-cols-3 gap-4">
+                                                {section.list.map((tech, indexTech) => {
+                                                    return (
+                                                        <ListTech alt={tech.alt} imagePath={tech.imagePath} name={tech.name} key={indexTech} />
+                                                    );
+                                                })}
+                                            </ul>
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
-                    )
+                    );
                 })}
             </div>
         </section>

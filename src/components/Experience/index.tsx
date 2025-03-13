@@ -3,6 +3,7 @@ import Job from '../Job';
 import useEmblaCarousel from 'embla-carousel-react';
 
 import EmblaCarousel from '../Embla/EmblaCarousel';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Experience() {
     const [openIndex, setOpenIndex] = useState<string | null>(null);

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dynamic from "next/dynamic";
 const Map = dynamic(() => import('../Map'), {
-    ssr: false, // Isso garante que o componente será renderizado apenas no lado do cliente
+    ssr: false,
 });
 import { faEnvelopeOpen, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { sendEmail } from "@/actions/sendEmail.action";

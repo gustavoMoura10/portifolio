@@ -9,11 +9,8 @@ export default function Footer() {
                     © {new Date().getFullYear()} Gustavo Moura. Todos os direitos reservados.
                 </p>
                 <div className="flex space-x-4 mt-4 md:mt-0">
-                    <a href="https://gitlab.com/gustavoMoura10" target="_blank" className="text-gray-600 dark:text-gray-300 hover:text-emerald-600 transition">
+                    <a href="https://github.com/gustavoMoura10" target="_blank" className="text-gray-600 dark:text-gray-300 hover:text-emerald-600 transition">
                         <FontAwesomeIcon icon={faGithub} size="lg" />
-                    </a>
-                    <a href="https://linkedin.com/in/seuusuario" target="_blank" className="text-gray-600 dark:text-gray-300 hover:text-emerald-600 transition">
-                        <FontAwesomeIcon icon={faGitlab} size="lg" />
                     </a>
                     <a href="https://www.linkedin.com/in/gustavo-moura-987137202/" target="_blank" className="text-gray-600 dark:text-gray-300 hover:text-emerald-600 transition">
                         <FontAwesomeIcon icon={faLinkedin} size="lg" />
