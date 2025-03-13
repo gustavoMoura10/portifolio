@@ -47,7 +47,7 @@ export default function Contact() {
                 <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">
                     Contato
                 </h2>
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-4 text-gray-700 dark:text-gray-300">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-4 text-gray-700 dark:text-gray-300 justify-center">
                     <div className="flex flex-row">
                         <div>
                             <FontAwesomeIcon icon={faPhone} className="mr-2 text-emerald-600" />
