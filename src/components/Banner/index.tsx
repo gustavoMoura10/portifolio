@@ -6,10 +6,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl"; // Importando o hook de traduções
 import "./index.css";
 
 export default function Banner() {
     const [isMobile, setIsMobile] = useState(false);
+    const t = useTranslations("banner"); // Usando o hook de traduções
 
     useEffect(() => {
         const checkScreenSize = () => setIsMobile(window.innerWidth <= 1000);
@@ -24,7 +26,7 @@ export default function Banner() {
             <div className="absolute inset-0 z-10">
                 <Image
                     src="/codigo.jpg"
-                    alt="Código"
+                    alt={t("background_alt")} // Usando a tradução para o texto alt da imagem
                     layout="fill"
                     objectFit="cover"
                     quality={100}
@@ -43,7 +45,7 @@ export default function Banner() {
                 >
                     <Image
                         src="/minhafoto1.jpeg"
-                        alt="Minha foto"
+                        alt={t("photo_alt")} // Usando a tradução para o texto alt da foto
                         width={300}
                         height={300}
                         className="rounded-full"
@@ -57,43 +59,45 @@ export default function Banner() {
                     animate={{ x: 0, y: 0, opacity: 1 }}
                     transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
                 >
-                    <h2 className="text-2xl font-bold mb-4">Gustavo Moura <small className="text-sm text-gray-500">(Castor)</small></h2>
+                    <h2 className="text-2xl font-bold mb-4">
+                        {t("name")} <small className="text-sm text-gray-500">({t("nickname")})</small>
+                    </h2>
 
                     {/* Informações de contato */}
-                    <div className="flex flex-row  mb-2 mt-2">
+                    <div className="flex flex-row mb-2 mt-2">
                         <FontAwesomeIcon icon={faEnvelopeOpen} className="mr-2 text-emerald-600" />
-                        <a href="mailto:gustavomoura.dev@gmail.com">
-                            <span>gustavomoura.dev@gmail.com</span>
+                        <a href={`mailto:${t("email")}`}>
+                            <span>{t("email")}</span>
                         </a>
                     </div>
                     <div className="flex flex-row mb-2 mt-2">
                         <FontAwesomeIcon icon={faPhone} className="mr-2 text-emerald-600" />
                         <a href="https://wa.me/5511981214534" target="_blank">
-                            <span>+55 (11) 98121-4534</span>
+                            <span>{t("phone")}</span>
                         </a>
                     </div>
-                    <div className="flex flex-row  mb-2 mt-2">
+                    <div className="flex flex-row mb-2 mt-2">
                         <FontAwesomeIcon icon={faGraduationCap} className="mr-2 text-emerald-600" />
-                        <span>Ciências da Computação (2021)</span>
+                        <span>{t("degree")}</span>
                     </div>
-                    <div className="flex flex-row  mb-2 mt-2">
+                    <div className="flex flex-row mb-2 mt-2">
                         <FontAwesomeIcon icon={faHouse} className="mr-2 text-emerald-600" />
-                        <span>Rua Camburiú, 99, Casa 1, 05058-020, Vila Ipojúca, São Paulo, SP, Brasil</span>
+                        <span>{t("address")}</span>
                     </div>
 
                     {/* Ícones sociais */}
                     <div className="flex flex-row mt-10 justify-around">
-                        <a href="https://www.linkedin.com/in/gustavo-moura-987137202/" target="_blank">
+                        <a href={t("linkedin")} target="_blank">
                             <FontAwesomeIcon icon={faLinkedin} className="mr-2 text-3xl text-blue-600" />
                         </a>
-                        <a href="https://github.com/gustavoMoura10" target="_blank">
+                        <a href={t("github")} target="_blank">
                             <FontAwesomeIcon icon={faGithub} className="mr-2 text-3xl text-dark-900" />
                         </a>
                     </div>
                     <div className="flex flex-row mt-10 justify-center">
                         <button className="cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded">
-                            <a href={'/curriculo.pdf'} download>
-                                <FontAwesomeIcon icon={faFile} className="mr-2 text-1xl" /> Baixar CV
+                            <a href={t("link_cv")} download>
+                                <FontAwesomeIcon icon={faFile} className="mr-2 text-1xl" /> {t("download_cv")}
                             </a>
                         </button>
                     </div>

@@ -1,0 +1,114 @@
+{
+    "nav": {
+        "aboutMe": "Sobre mim",
+        "experience": "Experiência Profissional",
+        "skills": "Habilidades",
+        "contact": "Contato",
+        "language": "Português"
+    },
+    "banner": {
+        "name": "Gustavo Moura",
+        "email": "gustavomoura.dev@gmail.com",
+        "phone": "+55 (11) 98121-4534",
+        "degree": "Ciências da Computação (2021)",
+        "address": "Rua Camburiú, 99, Casa 1, 05058-020, Vila Ipojúca, São Paulo, SP, Brasil",
+        "linkedin": "https://www.linkedin.com/in/gustavo-moura-987137202/",
+        "github": "https://github.com/gustavoMoura10",
+        "download_cv": "Baixar CV",
+        "link_cv": "cv-pt.pdf",
+        "background_alt": "Imagem de fundo código",
+        "photo_alt": "Foto de Gustavo Moura",
+        "nickname": "Castor"
+    },
+    "about_me": {
+        "title": "Sobre mim",
+        "resume": {
+            "title": "Resumo",
+            "text1": "Graduado em Ciências da Computação (Dez 2020), com sólida experiência no desenvolvimento de software desde 2018. Ao longo da minha trajetória, desenvolvi habilidades em diversas tecnologias, incluindo Java, JavaScript, TypeScript, React, React Native, Vue.js, Angular, Node.js, Spring Boot, além de bancos de dados como MySQL, PostgreSQL, MongoDB e Neo4j. Tenho experiência com Computação em Nuvem, CI/CD e testes unitários.",
+            "text2": "Minha experiência inclui o gerenciamento de bancos de dados, desenvolvimento de automações para integrar dados de serviços de terceiros e a implementação de soluções baseadas em IA para otimização de processos e integração de sistemas. Também criei funcionalidades que permitem aos usuários realizarem implantações de dados de forma autônoma, reduzindo a dependência de suporte técnico. Trabalhei no desenvolvimento full-stack, criando microserviços, otimizando processos internos e garantindo a escalabilidade e eficiência dos sistemas. Além disso, implementei soluções de automação de processos para setores como saúde e hotelaria, incluindo disparo de e-mails, web scraping e integração de sistemas internos.",
+            "text3": "Sou apaixonado por novas tecnologias e estou sempre em busca de aprimorar minhas habilidades para oferecer soluções inovadoras e eficientes. Além disso, tenho um grande interesse pelas artes gerais e pelo cinema."
+        },
+        "degree": {
+            "title": "Graduação",
+            "text1": "Sou formado em",
+            "text2": "Ciências da Computação",
+            "text3": "pela",
+            "text4": "Universidade Paulista (UNIP)",
+            "text5": ", com início em Janeiro de 2017 e conclusão em Dezembro de 2020.",
+            "text6": "Durante o curso, adquiri conhecimentos em diversas áreas, incluindo:",
+            "text7": "Lógica de Programação",
+            "text8": "Desenvolvimento Web",
+            "text9": "Banco de Dados",
+            "text10": "Matemática Aplicada para Computação",
+            "text11": "Estatística",
+            "text12": "Inteligência Artificial",
+            "text13": "Sistemas Operacionais",
+            "text14": "Arquitetura de Software",
+            "text15": "Arquitetura Computacional",
+            "text16": "Redes de Computadores",
+            "text17": "Esses conhecimentos me proporcionaram uma base sólida para atuar no desenvolvimento de software, desde a concepção de soluções até a implementação e manutenção de sistemas complexos."
+        },
+        "languages": {
+            "title": "Idiomas",
+            "text1": "Português (Nativo)",
+            "text2": "Inglês (Avançado)",
+            "text3": "Espanhol (Básico)",
+            "text4": "Frances (Básico)"
+        }
+    },
+    "experience": {
+        "title": "Experiência Profissional",
+        "image_src1": "/experiences/superlogica.jpeg",
+        "image_alt1": "Superlógica",
+        "function_job1": "Analista Desenvolvedor Pleno",
+        "enterprise1": "Superlógica Tecnologias",
+        "schedule1": "Tempo integral",
+        "from1": "Dez 2021",
+        "to1": "Presente",
+        "place1": "São Paulo, Brasil",
+        "typeJob1": "Remoto",
+        "description1": "Gerenciei bancos de dados e desenvolvi automações para integração de dados de serviços de terceiros, utilizando Node.js (JavaScript, TypeScript) e Python para extrair informações em XML, SQL, Excel e JSON, adaptando-as a um formato padronizado. Para otimizar a importação, implementei um fluxo baseado em AWS (EC2, Lambdas e SQS), permitindo processamento em lote e execuções paralelas, garantindo eficiência e evitando gargalos no banco de dados. No front-end, utilizei Angular para criar interfaces intuitivas que facilitam a visualização e o gerenciamento dos formatos de importação. Além disso, implementei soluções de IA para analisar e mapear automaticamente padrões nos dados externos, ajustando-os ao modelo interno para garantir consistência e eficiência na integração. Para suporte aos consultores, utilizei SGBDs (DBeaver), permitindo fluxos ágeis de atualização, inserção, deleção e consulta de dados. Com atalhos internos, foi possível realizar operações em massa sem a necessidade de escrever queries complexas manualmente, tornando o processo mais rápido e seguro. Essas soluções reduziram a necessidade de suporte técnico, otimizaram o fluxo operacional e aprimoraram a escalabilidade do sistema.",
+        "slug1": "superlogica",
+        "image_src2": "/experiences/qualicorp.jpeg",
+        "image_alt2": "Qualicorp",
+        "function_job2": "Analista Desenvolvedor Trainee II Fullstack",
+        "enterprise2": "Qualicorp",
+        "schedule2": "Tempo integral",
+        "from2": "Fev 2021",
+        "to2": "Dez 2021",
+        "place2": "São Paulo, Brasil",
+        "typeJob2": "Remoto",
+        "description2": "Atuei como Analista Desenvolvedor Trainee II Fullstack em um projeto terceirizado para a Qualicorp, focado no desenvolvimento de soluções para o gerenciamento de planos de saúde. Utilizei Vue.js para criar dashboards interativos, permitindo a visualização de contratos, histórico de atualizações da ANS, uso do plano em diferentes períodos e funcionalidades administrativas, como atualização de cadastros, disparo de mensagens e gestão de dados. No backend, desenvolvi microserviços em Node.js, estruturando APIs que gerenciavam fluxos específicos do sistema, garantindo escalabilidade e integração eficiente entre módulos. Para armazenar e gerenciar as relações entre os dados, utilizei Neo4J, permitindo atualizações massivas e otimização na gestão das informações dos planos de saúde.",
+        "slug2": "qualicorp",
+        "image_src3": "/experiences/brisa.jpeg",
+        "image_alt3": "Brisa",
+        "function_job3": "Analista Desenvolvedor Júnior",
+        "enterprise3": "BRISA Tecnologia",
+        "schedule3": "Tempo integral",
+        "from3": "Jun 2019",
+        "to3": "Fev 2021",
+        "place3": "São Paulo, Brasil",
+        "typeJob3": "Presencial",
+        "description3": "Atuei como Analista Desenvolvedor Júnior em uma Fábrica de Software que prestava serviços a terceiros, desenvolvendo soluções full-stack para diferentes setores. Utilizei Node.js, Java Spring Boot, Angular, Vue.js, React e React Native para criar sistemas personalizados, além de automações para otimizar operações administrativas. No setor de hotelaria, implementei Angular para boilerplates de templates, Vue.js para telas administrativas e Java Spring Boot para APIs de gerenciamento de imóveis. Utilizei Node.js e Express para disparo massivo de e-mails e Selenium e Puppeteer para automações em ERPs e CRMs. Desenvolvi interfaces interativas em React para totens de check-in e aplicativos mobile em React Native para check-in remoto dos clientes. No setor de shopping centers, desenvolvi dashboards em React para monitoramento de fluxo de pessoas via câmeras com IA. Criei APIs em Node.js com Express para exibir esses dados e utilizei MongoDB para armazenamento e formatação das informações. Para gerenciar o grande volume de dados captados, implementei um fluxo baseado em AWS (SQS, Lambda), garantindo eficiência no processamento e integração.",
+        "slug3": "brisa"
+    },
+    "skills": {
+        "title":"Habilidades",
+        "text1":"Linguagens",
+        "text2":"Frameworks Backend | ORMs",
+        "text3":"Frameworks Frontend",
+        "text4":"Testes",
+        "text5":"Automação",
+        "text6":"Infraestrutura"
+    },
+    "contact": {
+        "title": "Contact",
+        "text1":"Fale comigo",
+        "text2":"Nome",
+        "text3":"E-mail",
+        "text4":"Mensagem"
+    },
+    "footer": {
+        "text1": "Todos os direitos reservados."
+    }
+}

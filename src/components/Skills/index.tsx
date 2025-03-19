@@ -3,9 +3,11 @@ import ListTech from '../ListTech';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from 'next-intl';
 export default function Skills() {
     const [defaultOpen, setDefaultOpen] = useState(null);
     const [isMobile, setIsMobile] = useState(false);
+    const t = useTranslations("skills");
     const checkIsMobile = () => {
         if (typeof window !== "undefined") {
             setIsMobile(window.innerWidth < 640);
@@ -29,7 +31,7 @@ export default function Skills() {
     const sections = [
         {
             name: "language",
-            title: "Linguagens",
+            title: t("text1"),
             list: [
                 { name: "Javascript", imagePath: "/skills/javascript-js.svg", alt: "Javascript" },
                 { name: "HTML", imagePath: "/skills/file-type-html.svg", alt: "HTML" },
@@ -42,7 +44,7 @@ export default function Skills() {
         },
         {
             name: "backend",
-            title: "Frameworks Backend | ORMs",
+            title:t("text2"),
             list: [
                 { name: "Node.js", imagePath: "/skills/nodejs.svg", alt: "Node.js" },
                 { name: "Express", imagePath: "/skills/express-original.svg", alt: "Express" },
@@ -62,7 +64,7 @@ export default function Skills() {
         },
         {
             name: "frontend",
-            title: "Frameworks Frontend",
+            title: t("text3"),
             list: [
                 { name: "Angular", imagePath: "/skills/file-type-angular.svg", alt: "Angular" },
                 { name: "Vue", imagePath: "/skills/vue.svg", alt: "Vue" },
@@ -75,7 +77,7 @@ export default function Skills() {
         },
         {
             name: "testing",
-            title: "Testes",
+            title: t("text4"),
             list: [
                 { name: "JUnit", imagePath: "/skills/junit.svg", alt: "JUnit" },
                 { name: "Jest", imagePath: "/skills/file-type-jest.svg", alt: "Jest" },
@@ -84,7 +86,7 @@ export default function Skills() {
         },
         {
             name: "automation",
-            title: "Automação",
+            title: t("text5"),
             list: [
                 { name: "Selenium", imagePath: "/skills/selenium.svg", alt: "Selenium" },
                 { name: "Puppeteer", imagePath: "/skills/puppeteer.svg", alt: "Puppeteer" }
@@ -92,7 +94,7 @@ export default function Skills() {
         },
         {
             name: "infrastructure",
-            title: "Infraestrutura",
+            title: t("text6"),
             list: [
                 { name: "Linux", imagePath: "/skills/linux.svg", alt: "Linux" },
                 { name: "Docker", imagePath: "/skills/docker.svg", alt: "Docker" },
@@ -112,7 +114,7 @@ export default function Skills() {
     return (
         <section id="skills" className="flex flex-col bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 dark:bg-gray-800 p-4">
             <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">
-                Habilidades
+                {t("title")}
             </h2>
             <div className='grow-1 flex flex-col justify-between'>
                 {sections.map((section, indexSection) => {

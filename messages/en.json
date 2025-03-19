@@ -1,0 +1,114 @@
+{
+    "nav": {
+        "aboutMe": "About Me",
+        "experience": "Professional Experience",
+        "skills": "Skills",
+        "contact": "Contact",
+        "language": "English"
+    },
+    "banner": {
+        "name": "Gustavo Moura",
+        "email": "gustavomoura.dev@gmail.com",
+        "phone": "+55 (11) 98121-4534",
+        "degree": "Computer Science (2021)",
+        "address": "Rua Camburiú, 99, Casa 1, 05058-020, Vila Ipojúca, São Paulo, SP, Brazil",
+        "linkedin": "https://www.linkedin.com/in/gustavo-moura-987137202/",
+        "github": "https://github.com/gustavoMoura10",
+        "download_cv": "Download CV",
+        "link_cv": "cv-eng.pdf",
+        "background_alt": "Code background image",
+        "photo_alt": "Gustavo Moura Photo",
+        "nickname": "Castor"
+    },
+    "about_me": {
+        "title": "About me",
+        "resume": {
+            "title": "Resume",
+            "text1": "Graduated in Computer Science (Dec 2020), with solid experience in software development since 2018. Throughout my journey, I have developed skills in various technologies, including Java, JavaScript, TypeScript, React, React Native, Vue.js, Angular, Node.js, Spring Boot, as well as databases such as MySQL, PostgreSQL, MongoDB, and Neo4j. I have experience with Cloud Computing, CI/CD, and unit testing.",
+            "text2": "My experience includes database management, development of automations to integrate data from third-party services, and the implementation of AI-based solutions for process optimization and system integration. I have also created features that allow users to perform data deployments autonomously, reducing reliance on technical support. I have worked on full-stack development, creating microservices, optimizing internal processes, and ensuring the scalability and efficiency of systems. Additionally, I implemented process automation solutions for sectors such as healthcare and hospitality, including email triggers, web scraping, and integration of internal systems.",
+            "text3": "I am passionate about new technologies and always strive to improve my skills to provide innovative and efficient solutions. Additionally, I have a great interest in the arts in general and cinema."
+        },
+        "degree": {
+            "title": "Degree",
+            "text1": "I'm graduated in",
+            "text2": "Computer Science",
+            "text3": "by",
+            "text4": "Universidade Paulista (UNIP)",
+            "text5": ", with enrollment starting in January 2017 and graduation in December 2020.",
+            "text6": "During the course, I acquired knowledge in various areas, including:",
+            "text7": "Programming Logic",
+            "text8": "Web Development",
+            "text9": "Databases",
+            "text10": "Applied Mathematics for Computing",
+            "text11": "Statistics",
+            "text12": "Artificial Intelligence",
+            "text13": "Operating Systems",
+            "text14": "Software Architecture",
+            "text15": "Computational Architecture",
+            "text16": "Computer Networks",
+            "text17": "These skills provided me with a solid foundation for working in software development, from the conception of solutions to the implementation and maintenance of complex systems."
+        },
+        "languages": {
+            "title": "Languages",
+            "text1": "Portuguese (Native)",
+            "text2": "English (C1)",
+            "text3": "Spanish (A2)",
+            "text4": "French (A1)"
+        }
+    },
+    "experience": {
+        "title": "Experience",
+        "image_src1": "/experiences/superlogica.jpeg",
+        "image_alt1": "Superlogica",
+        "function_job1": "Mid-Level Developer Analyst",
+        "enterprise1": "Superlógica Technologies",
+        "schedule1": "Full-time",
+        "from1": "Dec 2021",
+        "to1": "Present",
+        "place1": "São Paulo, Brazil",
+        "typeJob1": "Remote",
+        "description1": "I managed databases and developed automations for integrating data from third-party services, using Node.js (JavaScript, TypeScript) and Python to extract information in XML, SQL, Excel, and JSON, adapting it to a standardized format. To optimize imports, I implemented a workflow based on AWS (EC2, Lambdas, and SQS), enabling batch processing and parallel executions, ensuring efficiency and preventing database bottlenecks. On the front-end, I used Angular to create intuitive interfaces that facilitate the visualization and management of import formats. Additionally, I implemented AI solutions to analyze and automatically map patterns in external data, adjusting them to the internal model to ensure consistency and efficiency in integration. For consultant support, I used RDBMS (DBeaver), allowing agile workflows for updating, inserting, deleting, and querying data. With internal shortcuts, it was possible to perform bulk operations without the need to write complex queries manually, making the process faster and safer. These solutions reduced the need for technical support, optimized the operational flow, and enhanced system scalability.",
+        "slug1": "superlogica",
+        "image_src2": "/experiences/qualicorp.jpeg",
+        "image_alt2": "Qualicorp",
+        "function_job2": "Fullstack Developer Trainee II",
+        "enterprise2": "Qualicorp",
+        "schedule2": "Full-time",
+        "from2": "Feb 2021",
+        "to2": "Dec 2021",
+        "place2": "São Paulo, Brazil",
+        "typeJob2": "Remote",
+        "description2": "I worked as a Fullstack Developer Trainee II in an outsourced project for Qualicorp, focusing on the development of solutions for health plan management. I used Vue.js to create interactive dashboards that allowed visualization of contracts, the update history of the National Health Agency (ANS) — the regulatory body responsible for overseeing health plans in Brazil — plan usage over different periods, and administrative functionalities such as updating records, sending messages, and managing data. On the backend, I developed microservices in Node.js, structuring APIs that managed specific system flows, ensuring scalability and efficient integration between modules. For data storage and management of relationships, I used Neo4J, allowing bulk updates and optimization of health plan data management.",
+        "slug2": "qualicorp",
+        "image_src3": "/experiences/brisa.jpeg",
+        "image_alt3": "Brisa",
+        "function_job3": "Junior Developer Analyst",
+        "enterprise3": "BRISA Tecnologia",
+        "schedule3": "Full-time",
+        "from3": "Jun 2019",
+        "to3": "Feb 2021",
+        "place3": "São Paulo, Brazil",
+        "typeJob3": "On-site",
+        "description3": "I worked as a Junior Developer Analyst in a Software Factory that provided services to third parties, developing full-stack solutions for different sectors. I used Node.js, Java Spring Boot, Angular, Vue.js, React, and React Native to create customized systems, as well as automations to optimize administrative operations. In the hospitality sector, I implemented Angular for template boilerplates, Vue.js for administrative screens, and Java Spring Boot for property management APIs. I used Node.js and Express for bulk email sending and Selenium and Puppeteer for automations in ERPs and CRMs. I developed interactive interfaces in React for check-in kiosks and mobile apps in React Native for remote customer check-ins. In the shopping center sector, I developed dashboards in React to monitor people flow via AI-powered cameras. I created APIs in Node.js with Express to display this data and used MongoDB for data storage and formatting. To manage the large volume of data collected, I implemented a workflow based on AWS (SQS, Lambda), ensuring efficiency in processing and integration.",
+        "slug3": "brisa"
+    },
+    "skills": {
+        "title": "Skills",
+        "text1": "Languages",
+        "text2": "Backend Frameworks | ORMs",
+        "text3": "Frontend Frameworks",
+        "text4": "Testing",
+        "text5": "Automation",
+        "text6": "Infrastructure"
+    },
+    "contact": {
+        "title": "Contact",
+        "text1":"Message me",
+        "text2":"Name",
+        "text3":"E-mail",
+        "text4":"Message"
+    },
+    "footer": {
+        "text1": "All rights reserved."
+    }
+}

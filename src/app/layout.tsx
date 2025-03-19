@@ -1,46 +1,23 @@
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-import NavMenu from "@/components/NavMenu";
-import Footer from "@/components/Footer";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
-
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Gustavo Moura",
-  description: "Portfólio de Gustavo Moura",
-  keywords: "Gustavo Moura, Desenvolvedor, Front-end, Back-end, Fullstack, Portfolio, Banco de Dados, Node.js, Java, Javascript, React, Angular, Vue, Express, Next.js, Nest.js, MongoDB, MySQL, TypeScript, PostgreSQL, SQL Server",
+  title: 'Gustavo Moura',
+  description: 'Portfolio de Gustavo Moura',
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <NavMenu />
-        <main>
-          {children}
-        </main>
-        <Footer />
-        <ScrollToTopButton />
+    <html>
+      <body className={inter.className}>
+        {children}
       </body>
     </html>
   );

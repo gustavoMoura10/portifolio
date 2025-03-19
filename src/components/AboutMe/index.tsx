@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 export default function AboutMe() {
+  const t = useTranslations("about_me");
   const cardVariants = {
     offscreen: {
       x: -100,
@@ -21,7 +23,7 @@ export default function AboutMe() {
   return (
     <section id="aboutMe" className="flex flex-col bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 dark:bg-gray-800 p-6">
       <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">
-        Sobre Mim
+        {t("title")}
       </h2>
 
       <div className="flex flex-col gap-8">
@@ -29,7 +31,7 @@ export default function AboutMe() {
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.2 }}
-          variants={cardVariants}          
+          variants={cardVariants}
           className="flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow dark:border-gray-700 dark:bg-gray-800"
         >
           <div className="w-full md:w-1/3">
@@ -43,15 +45,15 @@ export default function AboutMe() {
             />
           </div>
           <div className="w-full md:w-2/3 p-6">
-            <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">Resumo</h3>
+            <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white"> {t("resume.title")}</h3>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Graduado em Ciências da Computação (Dez 2020), com sólida experiência no desenvolvimento de software desde 2018. Ao longo da minha trajetória, desenvolvi habilidades em diversas tecnologias, incluindo Java, JavaScript, TypeScript, React, React Native, Vue.js, Angular, Node.js, Spring Boot, além de bancos de dados como MySQL, PostgreSQL, MongoDB e Neo4j. Tenho experiência com Computação em Nuvem, CI/CD e testes unitários.
+              {t("resume.text1")}
             </p>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Minha experiência inclui o gerenciamento de bancos de dados, desenvolvimento de automações para integrar dados de serviços de terceiros e a implementação de soluções baseadas em IA para otimização de processos e integração de sistemas. Também criei funcionalidades que permitem aos usuários realizarem implantações de dados de forma autônoma, reduzindo a dependência de suporte técnico. Trabalhei no desenvolvimento full-stack, criando microserviços, otimizando processos internos e garantindo a escalabilidade e eficiência dos sistemas. Além disso, implementei soluções de automação de processos para setores como saúde e hotelaria, incluindo disparo de e-mails, web scraping e integração de sistemas internos.
+              {t("resume.text2")}
             </p>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Sou apaixonado por novas tecnologias e estou sempre em busca de aprimorar minhas habilidades para oferecer soluções inovadoras e eficientes. Além disso, tenho um grande interesse pelas artes gerais e pelo cinema.
+              {t("resume.text3")}
             </p>
           </div>
         </motion.div>
@@ -74,27 +76,27 @@ export default function AboutMe() {
             />
           </div>
           <div className="w-full md:w-2/3 p-6">
-            <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">Graduação</h3>
+            <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">{t("degree.title")}</h3>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Sou formado em <strong>Ciência da Computação</strong> pela <strong>Universidade Paulista (UNIP)</strong>, com início em Janeiro de 2017 e conclusão em Dezembro de 2020.
+              {t("degree.text1")} <strong>{t("degree.text2")}</strong> {t("degree.text3")} <strong>{t("degree.text4")}</strong>{t("degree.text5")}.
             </p>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Durante o curso, adquiri conhecimentos em diversas áreas, incluindo:
+              {t("degree.text6")}
             </p>
             <ul className="list-disc list-inside mb-3 font-normal text-gray-700 dark:text-gray-400">
-              <li>Lógica de Programação</li>
-              <li>Desenvolvimento Web</li>
-              <li>Banco de Dados</li>
-              <li>Matemática Aplicada para Computação</li>
-              <li>Estatística</li>
-              <li>Inteligência Artificial</li>
-              <li>Sistemas Operacionais</li>
-              <li>Arquitetura de Software</li>
-              <li>Arquitetura Computacional</li>
-              <li>Redes de Computadores</li>
+              <li>{t("degree.text7")}</li>
+              <li>{t("degree.text8")}</li>
+              <li>{t("degree.text9")}</li>
+              <li>{t("degree.text10")}</li>
+              <li>{t("degree.text11")}</li>
+              <li>{t("degree.text12")}</li>
+              <li>{t("degree.text13")}</li>
+              <li>{t("degree.text14")}</li>
+              <li>{t("degree.text15")}</li>
+              <li>{t("degree.text16")}</li>
             </ul>
             <p className="font-normal text-gray-700 dark:text-gray-400">
-              Esses conhecimentos me proporcionaram uma base sólida para atuar no desenvolvimento de software, desde a concepção de soluções até a implementação e manutenção de sistemas complexos.
+            {t("degree.text17")}
             </p>
           </div>
         </motion.div>
@@ -117,7 +119,7 @@ export default function AboutMe() {
             />
           </div>
           <div className="w-full md:w-2/3 p-6">
-            <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">Línguas</h3>
+            <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">{t("languages.title")}</h3>
             <ul className="space-y-3">
               <li className="flex items-center">
                 <Image
@@ -127,7 +129,7 @@ export default function AboutMe() {
                   height={18}
                   className="mr-2"
                 />
-                <p className="font-normal text-gray-700 dark:text-gray-400">Português (Nativo)</p>
+                <p className="font-normal text-gray-700 dark:text-gray-400">{t("languages.text1")}</p>
               </li>
               <li className="flex items-center">
                 <Image
@@ -137,7 +139,7 @@ export default function AboutMe() {
                   height={18}
                   className="mr-2"
                 />
-                <p className="font-normal text-gray-700 dark:text-gray-400">Inglês (Avançado)</p>
+                <p className="font-normal text-gray-700 dark:text-gray-400">{t("languages.text2")}</p>
               </li>
               <li className="flex items-center">
                 <Image
@@ -147,7 +149,7 @@ export default function AboutMe() {
                   height={18}
                   className="mr-2"
                 />
-                <p className="font-normal text-gray-700 dark:text-gray-400">Espanhol (Básico)</p>
+                <p className="font-normal text-gray-700 dark:text-gray-400">{t("languages.text3")}</p>
               </li>
               <li className="flex items-center">
                 <Image
@@ -157,7 +159,7 @@ export default function AboutMe() {
                   height={18}
                   className="mr-2"
                 />
-                <p className="font-normal text-gray-700 dark:text-gray-400">Francês (Básico)</p>
+                <p className="font-normal text-gray-700 dark:text-gray-400">{t("languages.text4")}</p>
               </li>
             </ul>
           </div>

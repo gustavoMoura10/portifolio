@@ -7,10 +7,11 @@ const Map = dynamic(() => import('../Map'), {
 import { faEnvelopeOpen, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { sendEmail } from "@/actions/sendEmail.action";
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
     const [response, setResponse] = useState<any | null>(null);
-
+    const t = useTranslations("contact");
     useEffect(() => {
         if (response) {
             const timer = setTimeout(() => {
@@ -45,7 +46,7 @@ export default function Contact() {
         <section id="contact" className="flex flex-col bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 dark:bg-gray-800 p-4">
             <div>
                 <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">
-                    Contato
+                    {t('title')}
                 </h2>
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-4 text-gray-700 dark:text-gray-300 justify-center">
                     <div className="flex flex-row">
@@ -74,10 +75,10 @@ export default function Contact() {
                     <Map />
                 </div>
                 <div className="flex-1 p-6 rounded-lg shadow-md flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Fale comigo</h3>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t('text1')}</h3>
                     <form className="w-full sm:w-96" onSubmit={handleFormSubmit}>
                         <div className="mb-4">
-                            <label className="block text-gray-700 dark:text-gray-400 font-bold mb-2">Nome</label>
+                            <label className="block text-gray-700 dark:text-gray-400 font-bold mb-2">{t('text2')}</label>
                             <input
                                 required
                                 type="text"
@@ -86,7 +87,7 @@ export default function Contact() {
                             />
                         </div>
                         <div className="mb-4">
-                            <label className="block text-gray-700 dark:text-gray-400 font-bold mb-2">E-mail</label>
+                            <label className="block text-gray-700 dark:text-gray-400 font-bold mb-2">{t('text3')}</label>
                             <input
                                 required
                                 type="email"
@@ -95,7 +96,7 @@ export default function Contact() {
                             />
                         </div>
                         <div className="mb-4">
-                            <label className="block text-gray-700 dark:text-gray-400 font-bold mb-2">Mensagem</label>
+                            <label className="block text-gray-700 dark:text-gray-400 font-bold mb-2">{t('text4')}</label>
                             <textarea
                                 required
                                 className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600"
