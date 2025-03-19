@@ -10,7 +10,7 @@
         "name": "Gustavo Moura",
         "email": "gustavomoura.dev@gmail.com",
         "phone": "+55 (11) 98121-4534",
-        "degree": "Ciências da Computação (2021)",
+        "degree": "Ciências da Computação (2020)",
         "address": "Rua Camburiú, 99, Casa 1, 05058-020, Vila Ipojúca, São Paulo, SP, Brasil",
         "linkedin": "https://www.linkedin.com/in/gustavo-moura-987137202/",
         "github": "https://github.com/gustavoMoura10",
@@ -24,7 +24,7 @@
         "title": "Sobre mim",
         "resume": {
             "title": "Resumo",
-            "text1": "Graduado em Ciências da Computação (Dez 2020), com sólida experiência no desenvolvimento de software desde 2018. Ao longo da minha trajetória, desenvolvi habilidades em diversas tecnologias, incluindo Java, JavaScript, TypeScript, React, React Native, Vue.js, Angular, Node.js, Spring Boot, além de bancos de dados como MySQL, PostgreSQL, MongoDB e Neo4j. Tenho experiência com Computação em Nuvem, CI/CD e testes unitários.",
+            "text1": "Sou um Análista Desenvolvedor de Software, com sólida experiência no desenvolvimento de software desde 2018. Ao longo da minha trajetória, desenvolvi habilidades em diversas tecnologias, incluindo Java, JavaScript, TypeScript, React, React Native, Vue.js, Angular, Node.js, Spring Boot, além de bancos de dados como MySQL, PostgreSQL, MongoDB e Neo4j. Tenho experiência com Computação em Nuvem, CI/CD e testes unitários.",
             "text2": "Minha experiência inclui o gerenciamento de bancos de dados, desenvolvimento de automações para integrar dados de serviços de terceiros e a implementação de soluções baseadas em IA para otimização de processos e integração de sistemas. Também criei funcionalidades que permitem aos usuários realizarem implantações de dados de forma autônoma, reduzindo a dependência de suporte técnico. Trabalhei no desenvolvimento full-stack, criando microserviços, otimizando processos internos e garantindo a escalabilidade e eficiência dos sistemas. Além disso, implementei soluções de automação de processos para setores como saúde e hotelaria, incluindo disparo de e-mails, web scraping e integração de sistemas internos.",
             "text3": "Sou apaixonado por novas tecnologias e estou sempre em busca de aprimorar minhas habilidades para oferecer soluções inovadoras e eficientes. Além disso, tenho um grande interesse pelas artes gerais e pelo cinema."
         },
