@@ -1,9 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion"; // Importe motion e AnimatePresence
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import dynamic from "next/dynamic";
-const Map = dynamic(() => import('../Map'), {
-    ssr: false,
-});
+
 import { faEnvelopeOpen, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { sendEmail } from "@/actions/sendEmail.action";
 import { useState, useEffect } from "react";
