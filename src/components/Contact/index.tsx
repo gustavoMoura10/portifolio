@@ -71,9 +71,6 @@ export default function Contact() {
             </div>
 
             <div className="flex grow-1 flex-col md:flex-row gap-6 mt-4 ">
-                <div className="flex-1 mt-5 flex flex-col justify-center items-center">
-                    <Map />
-                </div>
                 <div className="flex-1 p-6 rounded-lg shadow-md flex flex-col justify-center items-center">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t('text1')}</h3>
                     <form className="w-full sm:w-96" onSubmit={handleFormSubmit}>
