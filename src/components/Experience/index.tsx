@@ -5,53 +5,13 @@ import EmblaCarousel from '../Embla/EmblaCarousel';
 import { useTranslations } from 'next-intl';
 
 export default function Experience() {
+    const jobKeys = ['totvs', 'superlogica', 'qualicorp', 'brisa'] as const;
+
     const [openIndex, setOpenIndex] = useState<string | null>(null);
     const toggleExperience = (index: string) => {
         setOpenIndex(openIndex === index ? null : index);
     };
     const t = useTranslations("experience");
-    const jobs = [
-        {
-            imageSrc: t('image_src1'),
-            imageAlt: t('image_alt1'),
-            functionJob: t('function_job1'),
-            enterprise: t('enterprise1'),
-            schedule: t('schedule1'),
-            from: t('from1'),
-            to: t('to1'),
-            place: t('place1'),
-            typeJob: t('typeJob1'),
-            descritiption: t('description1'),
-            slug: t('slug1')
-        },
-        {
-            imageSrc: t('image_src2'),
-            imageAlt: t('image_alt2'),
-            functionJob: t('function_job2'),
-            enterprise: t('enterprise2'),
-            schedule: t('schedule2'),
-            from: t('from2'),
-            to: t('to2'),
-            place: t('place2'),
-            typeJob: t('typeJob2'),
-            descritiption: t('description2'),
-            slug: t('slug2')
-        },
-        {
-            imageSrc: t('image_src3'),
-            imageAlt: t('image_alt3'),
-            functionJob: t('function_job3'),
-            enterprise: t('enterprise3'),
-            schedule: t('schedule3'),
-            from: t('from3'),
-            to: t('to3'),
-            place: t('place3'),
-            typeJob: t('typeJob3'),
-            descritiption: t('description3'),
-            slug: t('slug3')
-        }
-    ]
-
 
 
     return (
@@ -66,10 +26,20 @@ export default function Experience() {
 
             <div className='flex flex-col items-center grow-1'>
                 <EmblaCarousel
-                    slides={jobs.map((job, index) => (
+                    slides={jobKeys.map((name: string, index: number) => (
                         <Job
                             key={index}
-                            {...job}
+                            descritiption={t(`${name}.description`)}
+                            enterprise={t(`${name}.enterprise`)}
+                            functionJob={t(`${name}.function_job`)}
+                            schedule={t(`${name}.schedule`)}
+                            typeJob={t(`${name}.typeJob`)}
+                            slug={`${name}.slug`}
+                            imageSrc={t(`${name}.image_src`)}
+                            imageAlt={t(`${name}.image_alt`)}
+                            from={t(`${name}.from`)}
+                            place={t(`${name}.place`)}
+                            to={t(`${name}.to`)}
                             toggleExperience={toggleExperience}
                             openIndex={openIndex ?? ''}
                             setOpenIndex={setOpenIndex}
