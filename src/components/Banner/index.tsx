@@ -44,7 +44,7 @@ export default function Banner() {
                     transition={{ duration: 1.5, ease: "easeInOut" }}
                 >
                     <Image
-                        src="/minhafoto1.jpeg"
+                        src="/minhafoto1.jpg"
                         alt={t("photo_alt")} // Usando a tradução para o texto alt da foto
                         width={300}
                         height={300}
