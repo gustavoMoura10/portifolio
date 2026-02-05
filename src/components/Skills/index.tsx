@@ -39,12 +39,11 @@ export default function Skills() {
                 { name: "Typescript", imagePath: "/skills/typescript-icon.svg", alt: "Typescript" },
                 { name: "Java", imagePath: "/skills/java.svg", alt: "Java" },
                 { name: "Python", imagePath: "/skills/python.svg", alt: "Python" },
-                { name: "PHP", imagePath: "/skills/php.svg", alt: "PHP" }
             ]
         },
         {
             name: "backend",
-            title:t("text2"),
+            title: t("text2"),
             list: [
                 { name: "Node.js", imagePath: "/skills/nodejs.svg", alt: "Node.js" },
                 { name: "Express", imagePath: "/skills/express-original.svg", alt: "Express" },
@@ -59,7 +58,8 @@ export default function Skills() {
                 { name: "JSF", imagePath: "/skills/jsf.svg", alt: "JSF" },
                 { name: "Hibernate", imagePath: "/skills/hibernate.svg", alt: "Hibernate" },
                 { name: "Flask", imagePath: "/skills/flask.svg", alt: "Flask" },
-                { name: "Zend", imagePath: "/skills/zend-framework.svg", alt: "Zend" }
+                { name: "Django", imagePath: "/skills/django.svg", alt: "Django" },
+                { name: "FastAPI", imagePath: "/skills/fastapi.svg", alt: "FastAPI" },
             ]
         },
         {
@@ -81,7 +81,7 @@ export default function Skills() {
             list: [
                 { name: "JUnit", imagePath: "/skills/junit.svg", alt: "JUnit" },
                 { name: "Jest", imagePath: "/skills/file-type-jest.svg", alt: "Jest" },
-                { name: "PHPUnit", imagePath: "/skills/file-type-phpunit.svg", alt: "PHPUnit" }
+                { name: "PyTest", imagePath: "/skills/pytest.svg", alt: "PyTest" }
             ]
         },
         {
@@ -89,7 +89,8 @@ export default function Skills() {
             title: t("text5"),
             list: [
                 { name: "Selenium", imagePath: "/skills/selenium.svg", alt: "Selenium" },
-                { name: "Puppeteer", imagePath: "/skills/puppeteer.svg", alt: "Puppeteer" }
+                { name: "Puppeteer", imagePath: "/skills/puppeteer.svg", alt: "Puppeteer" },
+                { name: "Playwright", imagePath: "/skills/playwright.svg", alt: "Playwright" }
             ]
         },
         {
@@ -98,8 +99,7 @@ export default function Skills() {
             list: [
                 { name: "Linux", imagePath: "/skills/linux.svg", alt: "Linux" },
                 { name: "Docker", imagePath: "/skills/docker.svg", alt: "Docker" },
-                { name: "Nginx", imagePath: "/skills/file-type-nginx.svg", alt: "Nginx" },
-                { name: "Apache", imagePath: "/skills/apache.svg", alt: "Apache" },
+                { name: "Kubernetes", imagePath: "/skills/kubernetes.svg", alt: "Kubernetes" },
                 { name: "Git", imagePath: "/skills/git.svg", alt: "Git" },
                 { name: "AWS", imagePath: "/skills/aws.svg", alt: "AWS" },
                 { name: "Google Cloud", imagePath: "/skills/google-cloud.svg", alt: "Google Cloud" },
@@ -107,7 +107,8 @@ export default function Skills() {
                 { name: "MySQL", imagePath: "/skills/file-type-mysql.svg", alt: "MySQL" },
                 { name: "SQL Server", imagePath: "/skills/microsoft-sql-server-logo-svgrepo-com.svg", alt: "SQL Server" },
                 { name: "MongoDB", imagePath: "/skills/mongodb-original.svg", alt: "MongoDB" },
-                { name: "Neo4j", imagePath: "/skills/neo4j.svg", alt: "Neo4j" }
+                { name: "Neo4j", imagePath: "/skills/neo4j.svg", alt: "Neo4j" },
+                { name: "Redis", imagePath: "/skills/redis.svg", alt: "Redis" }
             ]
         }
     ];
